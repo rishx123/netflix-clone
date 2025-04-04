@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-box">
+        <h1>Dashboard</h1>
+        <div class="dashboard-buttons">
+            <!-- Row 1 -->
+            <div class="row">
+                <a class="add-button" href="/addMovieRoute">Add Movie</a>
+                <a class="update-button" href="/updateMovieRoute">Update Movie</a>
+                <a class="delete-button" href="/deleteMovieRoute">Delete Movie</a>
+                <a class="scanAll-button" href="/scanAllMovies">Scan All Movies</a>
+            </div>
+            <!-- Row 2 -->
+            <div class="row">
+                <a class="add-button" href="/addShowsRoute">Add TV Shows</a>
+                <a class="update-button" href="/updateShowsRoute">Update TV Shows</a>
+                <a class="delete-button" href="/deleteShowsRoute">Delete TV Shows</a>
+                <a class="scan-button" href="/scanAllTVShows">Scan All TV Shows</a>
+            </div>
+            <!-- Row 3 -->
+            <div class="row">
+                <a class="add-button" href="/">Server Status</a>
+                <a class="update-button" href="/restart">Restart Server</a>
+                <a class="delete-button" href="/power">Power Off Server</a>
+                <a class="logout-button" href="/admin/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-box {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+
+.dashboard-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Button styles */
+.add-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+.update-button {
+    background-color: #2196F3;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #1e88e5;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.scan-button {
+    background-color: #FF9800;
+    color: white;
+}
+
+.scan-button:hover {
+    background-color: #fb8c00;
+}
+
+.status-button {
+    background-color: #009688;
+    color: white;
+}
+
+.status-button:hover {
+    background-color: #00897b;
+}
+
+.logout-button {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #757575;
+}
+</style>
+</html>

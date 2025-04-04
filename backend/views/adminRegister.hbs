@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Register</title>
+</head>
+<body>
+    <h1>Admin Register</h1>
+    {{#if errorMessage}}
+    <p style="color:red;">{{errorMessage}}</p>
+    {{/if}}
+    <form action="/admin/register" method="POST">
+        <input placeholder="username" type="text" id="username" name="username" required>
+        <input placeholder="Password" type="password" id="password" name="password" required>
+        <input placeholder="Secret Code" type="password" id="secretCode" name="secretCode" required>
+        <button type="submit">Register</button>
+    </form>
+    
+</body>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #6a11cb;
+            box-shadow: 0 0 4px rgba(106, 17, 203, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        p {
+            color: red;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            form {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            input, button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</html>
